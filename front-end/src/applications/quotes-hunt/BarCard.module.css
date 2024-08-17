@@ -1,0 +1,46 @@
+/* Apply styles to the div with class "styled-div" */
+.cardDiv {
+    /* border: 1px solid #333; */
+    /* Border with 2px width and color #333 */
+    padding: 40px 40px;
+    /* Padding inside the div */
+    margin: 20px;
+    /* Margin around the div */
+    background-color: #fff;
+    /* Background color for the div */
+    color: #333;
+    /* Text color */
+    font-size: 18px;
+
+    font-family: "Verdana", Times, serif;
+
+    /* Font size for the text */
+    /* font-family: Arial, sans-serif; */
+    /* Font family for the text */
+    border-radius: 10px;
+    /* Rounded edges with 10px radius */
+    position: relative;
+    /* Position relative for child element positioning */
+    overflow: hidden;
+    /* Hide overflow to prevent color-bar from overflowing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* background: linear-gradient(to bottom,#00f, #fff); */
+}
+
+/* Apply styles to the color bar on the left-hand side */
+.cardBar {
+    position: absolute;
+    /* Position the color-bar relative to the parent div */
+    top: 0;
+    left: 0;
+    width: 90px;
+    /* Width of the color bar */
+    height: 100%;
+    /* Height to fill the entire div height */
+
+    background: linear-gradient(to bottom, #00f, #fff);
+    /*Gradient background */
+
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+    /* Inner shadow effect on the color bar */
+}
