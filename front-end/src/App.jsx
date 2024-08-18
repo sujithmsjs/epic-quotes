@@ -16,6 +16,7 @@ import { SearchBarTest } from "./applications/quotes-hunt/SearchBarTest";
 import ShowTags from "./applications/quotes-hunt/ShowTags";
 import { ConfirmDialogProvider } from "./context/ConfirmDialogContext";
 import { store } from "./store/store";
+import { ImportQuotes } from "./applications/quotes-hunt/ImportQuotes";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: 'search-test',
         element: <SearchBarTest />
+      },
+      {
+        path: "import",
+        element: <ImportQuotes />
       },
       {
         path: 'metrics',

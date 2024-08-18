@@ -32,7 +32,7 @@ const QuotesListV2 = () => {
     const [editDialogId, setEidtDialogId] = useState(0);
     const [searchData, setSearchData] = useState({ "pageSize": 10, "pageNo": 0 });
     const [categories, setCategories] = useState([])
-    const [showSearch, setShowSearch] = useState(true);
+    const [showSearch, setShowSearch] = useState(false);
 
     const refreshQuotesList = async (searchData) => {
         const data = await getAllQuotes(searchData);
