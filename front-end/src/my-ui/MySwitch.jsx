@@ -17,6 +17,7 @@ export const MySwitch = ({label = "Undefined",checked = false, register = () => 
                 class="form-check-input"
                 {...r}
                 name={inputLabel}
+                onChange={onChange}
                 type="checkbox"
                 role="switch"
                 style={{ width: '3em', height: '1.5em' }} />

@@ -22,6 +22,7 @@ import SearchBarV2 from "./SearchBarV2";
 import PaginationV2 from "./PaginationV2";
 import { toJsonString } from "../../util/utility";
 import MyFieldSelect from "../../my-ui/MyFieldSelect";
+import { MySwitch } from "../../my-ui/MySwitch";
 
 const QuotesListV2 = () => {
 
@@ -31,6 +32,7 @@ const QuotesListV2 = () => {
     const [editDialogId, setEidtDialogId] = useState(0);
     const [searchData, setSearchData] = useState({ "pageSize": 10, "pageNo": 0 });
     const [categories, setCategories] = useState([])
+    const [showSearch, setShowSearch] = useState(true);
 
     const refreshQuotesList = async (searchData) => {
         const data = await getAllQuotes(searchData);
@@ -101,9 +103,11 @@ const QuotesListV2 = () => {
 
 
         {
+
             <>
+            <MySwitch label="Show Search Options" onChange={e => setShowSearch(e.target.checked)} />
                 {/* <SearchBar searchData={searchData} setSearchData={setSearchData} /> */}
-                <SearchBarV2 searchData={searchData} setSearchData={setSearchData} />
+                {showSearch && <SearchBarV2 searchData={searchData} setSearchData={setSearchData} />}
 
 
 
